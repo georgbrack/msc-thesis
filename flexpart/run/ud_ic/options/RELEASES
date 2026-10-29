@@ -1,0 +1,2464 @@
+***************************************************************************************************************
+*                                                                                                             *
+*                                                                                                             *
+*                                                                                                             *
+*   Input file for the Lagrangian particle dispersion model FLEXPART                                          *
+*                        Please select your options                                                           *
+*                                                                                                             *
+*                                                                                                             *
+*                                                                                                             *
+***************************************************************************************************************
+&releases_ctrl
+    nspec = 1
+    specnum_rel = 24
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 230000
+    idate2 = 20150611
+    itime2 = 230000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 1'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 220000
+    idate2 = 20150611
+    itime2 = 220000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 2'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 210000
+    idate2 = 20150611
+    itime2 = 210000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 3'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 200000
+    idate2 = 20150611
+    itime2 = 200000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 4'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 190000
+    idate2 = 20150611
+    itime2 = 190000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 5'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 180000
+    idate2 = 20150611
+    itime2 = 180000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 6'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 170000
+    idate2 = 20150611
+    itime2 = 170000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 7'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 160000
+    idate2 = 20150611
+    itime2 = 160000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 8'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 150000
+    idate2 = 20150611
+    itime2 = 150000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 9'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 140000
+    idate2 = 20150611
+    itime2 = 140000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 10'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 130000
+    idate2 = 20150611
+    itime2 = 130000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 11'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 120000
+    idate2 = 20150611
+    itime2 = 120000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 12'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 110000
+    idate2 = 20150611
+    itime2 = 110000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 13'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 100000
+    idate2 = 20150611
+    itime2 = 100000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 14'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 90000
+    idate2 = 20150611
+    itime2 = 90000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 15'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 80000
+    idate2 = 20150611
+    itime2 = 80000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 16'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 70000
+    idate2 = 20150611
+    itime2 = 70000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 17'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 60000
+    idate2 = 20150611
+    itime2 = 60000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 18'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 50000
+    idate2 = 20150611
+    itime2 = 50000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 19'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 40000
+    idate2 = 20150611
+    itime2 = 40000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 20'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 30000
+    idate2 = 20150611
+    itime2 = 30000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 21'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 20000
+    idate2 = 20150611
+    itime2 = 20000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 22'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 10000
+    idate2 = 20150611
+    itime2 = 10000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 23'
+/
+
+&release
+    idate1 = 20150611
+    itime1 = 0
+    idate2 = 20150611
+    itime2 = 0
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 24'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 230000
+    idate2 = 20150610
+    itime2 = 230000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 25'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 220000
+    idate2 = 20150610
+    itime2 = 220000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 26'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 210000
+    idate2 = 20150610
+    itime2 = 210000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 27'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 200000
+    idate2 = 20150610
+    itime2 = 200000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 28'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 190000
+    idate2 = 20150610
+    itime2 = 190000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 29'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 180000
+    idate2 = 20150610
+    itime2 = 180000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 30'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 170000
+    idate2 = 20150610
+    itime2 = 170000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 31'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 160000
+    idate2 = 20150610
+    itime2 = 160000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 32'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 150000
+    idate2 = 20150610
+    itime2 = 150000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 33'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 140000
+    idate2 = 20150610
+    itime2 = 140000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 34'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 130000
+    idate2 = 20150610
+    itime2 = 130000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 35'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 120000
+    idate2 = 20150610
+    itime2 = 120000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 36'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 110000
+    idate2 = 20150610
+    itime2 = 110000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 37'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 100000
+    idate2 = 20150610
+    itime2 = 100000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 38'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 90000
+    idate2 = 20150610
+    itime2 = 90000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 39'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 80000
+    idate2 = 20150610
+    itime2 = 80000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 40'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 70000
+    idate2 = 20150610
+    itime2 = 70000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 41'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 60000
+    idate2 = 20150610
+    itime2 = 60000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 42'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 50000
+    idate2 = 20150610
+    itime2 = 50000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 43'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 40000
+    idate2 = 20150610
+    itime2 = 40000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 44'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 30000
+    idate2 = 20150610
+    itime2 = 30000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 45'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 20000
+    idate2 = 20150610
+    itime2 = 20000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 46'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 10000
+    idate2 = 20150610
+    itime2 = 10000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 47'
+/
+
+&release
+    idate1 = 20150610
+    itime1 = 0
+    idate2 = 20150610
+    itime2 = 0
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 48'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 230000
+    idate2 = 20150609
+    itime2 = 230000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 49'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 220000
+    idate2 = 20150609
+    itime2 = 220000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 50'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 210000
+    idate2 = 20150609
+    itime2 = 210000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 51'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 200000
+    idate2 = 20150609
+    itime2 = 200000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 52'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 190000
+    idate2 = 20150609
+    itime2 = 190000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 53'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 180000
+    idate2 = 20150609
+    itime2 = 180000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 54'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 170000
+    idate2 = 20150609
+    itime2 = 170000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 55'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 160000
+    idate2 = 20150609
+    itime2 = 160000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 56'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 150000
+    idate2 = 20150609
+    itime2 = 150000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 57'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 140000
+    idate2 = 20150609
+    itime2 = 140000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 58'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 130000
+    idate2 = 20150609
+    itime2 = 130000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 59'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 120000
+    idate2 = 20150609
+    itime2 = 120000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 60'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 110000
+    idate2 = 20150609
+    itime2 = 110000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 61'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 100000
+    idate2 = 20150609
+    itime2 = 100000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 62'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 90000
+    idate2 = 20150609
+    itime2 = 90000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 63'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 80000
+    idate2 = 20150609
+    itime2 = 80000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 64'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 70000
+    idate2 = 20150609
+    itime2 = 70000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 65'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 60000
+    idate2 = 20150609
+    itime2 = 60000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 66'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 50000
+    idate2 = 20150609
+    itime2 = 50000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 67'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 40000
+    idate2 = 20150609
+    itime2 = 40000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 68'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 30000
+    idate2 = 20150609
+    itime2 = 30000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 69'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 20000
+    idate2 = 20150609
+    itime2 = 20000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 70'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 10000
+    idate2 = 20150609
+    itime2 = 10000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 71'
+/
+
+&release
+    idate1 = 20150609
+    itime1 = 0
+    idate2 = 20150609
+    itime2 = 0
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 72'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 230000
+    idate2 = 20150608
+    itime2 = 230000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 73'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 220000
+    idate2 = 20150608
+    itime2 = 220000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 74'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 210000
+    idate2 = 20150608
+    itime2 = 210000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 75'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 200000
+    idate2 = 20150608
+    itime2 = 200000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 76'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 190000
+    idate2 = 20150608
+    itime2 = 190000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 77'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 180000
+    idate2 = 20150608
+    itime2 = 180000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 78'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 170000
+    idate2 = 20150608
+    itime2 = 170000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 79'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 160000
+    idate2 = 20150608
+    itime2 = 160000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 80'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 150000
+    idate2 = 20150608
+    itime2 = 150000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 81'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 140000
+    idate2 = 20150608
+    itime2 = 140000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 82'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 130000
+    idate2 = 20150608
+    itime2 = 130000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 83'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 120000
+    idate2 = 20150608
+    itime2 = 120000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 84'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 110000
+    idate2 = 20150608
+    itime2 = 110000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 85'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 100000
+    idate2 = 20150608
+    itime2 = 100000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 86'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 90000
+    idate2 = 20150608
+    itime2 = 90000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 87'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 80000
+    idate2 = 20150608
+    itime2 = 80000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 88'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 70000
+    idate2 = 20150608
+    itime2 = 70000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 89'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 60000
+    idate2 = 20150608
+    itime2 = 60000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 90'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 50000
+    idate2 = 20150608
+    itime2 = 50000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 91'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 40000
+    idate2 = 20150608
+    itime2 = 40000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 92'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 30000
+    idate2 = 20150608
+    itime2 = 30000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 93'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 20000
+    idate2 = 20150608
+    itime2 = 20000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 94'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 10000
+    idate2 = 20150608
+    itime2 = 10000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 95'
+/
+
+&release
+    idate1 = 20150608
+    itime1 = 0
+    idate2 = 20150608
+    itime2 = 0
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 96'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 230000
+    idate2 = 20150607
+    itime2 = 230000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 97'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 220000
+    idate2 = 20150607
+    itime2 = 220000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 98'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 210000
+    idate2 = 20150607
+    itime2 = 210000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 99'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 200000
+    idate2 = 20150607
+    itime2 = 200000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 100'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 190000
+    idate2 = 20150607
+    itime2 = 190000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 101'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 180000
+    idate2 = 20150607
+    itime2 = 180000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 102'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 170000
+    idate2 = 20150607
+    itime2 = 170000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 103'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 160000
+    idate2 = 20150607
+    itime2 = 160000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 104'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 150000
+    idate2 = 20150607
+    itime2 = 150000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 105'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 140000
+    idate2 = 20150607
+    itime2 = 140000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 106'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 130000
+    idate2 = 20150607
+    itime2 = 130000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 107'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 120000
+    idate2 = 20150607
+    itime2 = 120000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 108'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 110000
+    idate2 = 20150607
+    itime2 = 110000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 109'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 100000
+    idate2 = 20150607
+    itime2 = 100000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 110'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 90000
+    idate2 = 20150607
+    itime2 = 90000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 111'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 80000
+    idate2 = 20150607
+    itime2 = 80000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 112'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 70000
+    idate2 = 20150607
+    itime2 = 70000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 113'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 60000
+    idate2 = 20150607
+    itime2 = 60000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 114'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 50000
+    idate2 = 20150607
+    itime2 = 50000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 115'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 40000
+    idate2 = 20150607
+    itime2 = 40000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 116'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 30000
+    idate2 = 20150607
+    itime2 = 30000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 117'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 20000
+    idate2 = 20150607
+    itime2 = 20000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 118'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 10000
+    idate2 = 20150607
+    itime2 = 10000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 119'
+/
+
+&release
+    idate1 = 20150607
+    itime1 = 0
+    idate2 = 20150607
+    itime2 = 0
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 120'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 230000
+    idate2 = 20150606
+    itime2 = 230000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 121'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 220000
+    idate2 = 20150606
+    itime2 = 220000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 122'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 210000
+    idate2 = 20150606
+    itime2 = 210000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 123'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 200000
+    idate2 = 20150606
+    itime2 = 200000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 124'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 190000
+    idate2 = 20150606
+    itime2 = 190000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 125'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 180000
+    idate2 = 20150606
+    itime2 = 180000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 126'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 170000
+    idate2 = 20150606
+    itime2 = 170000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 127'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 160000
+    idate2 = 20150606
+    itime2 = 160000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 128'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 150000
+    idate2 = 20150606
+    itime2 = 150000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 129'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 140000
+    idate2 = 20150606
+    itime2 = 140000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 130'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 130000
+    idate2 = 20150606
+    itime2 = 130000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 131'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 120000
+    idate2 = 20150606
+    itime2 = 120000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 132'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 110000
+    idate2 = 20150606
+    itime2 = 110000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 133'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 100000
+    idate2 = 20150606
+    itime2 = 100000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 134'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 90000
+    idate2 = 20150606
+    itime2 = 90000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 135'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 80000
+    idate2 = 20150606
+    itime2 = 80000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 136'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 70000
+    idate2 = 20150606
+    itime2 = 70000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 137'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 60000
+    idate2 = 20150606
+    itime2 = 60000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 138'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 50000
+    idate2 = 20150606
+    itime2 = 50000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 139'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 40000
+    idate2 = 20150606
+    itime2 = 40000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 140'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 30000
+    idate2 = 20150606
+    itime2 = 30000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 141'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 20000
+    idate2 = 20150606
+    itime2 = 20000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 142'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 10000
+    idate2 = 20150606
+    itime2 = 10000
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 143'
+/
+
+&release
+    idate1 = 20150606
+    itime1 = 0
+    idate2 = 20150606
+    itime2 = 0
+    lon1 = 71
+    lon2 = 80
+    lat1 = 21
+    lat2 = 30
+    z1 = 0
+    z2 = 50
+    zkind = 1
+    mass = 1.0
+    parts = 5000
+    comment = 'RELEASE 144'
+/
+
+

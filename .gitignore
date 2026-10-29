@@ -1,0 +1,22 @@
+# Automatische Jupyter- und Python-Dateien
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Kompilierte Dateien
+*.o
+*.mod
+/flexpart/src/FLEXPART_ETA
+/flexpart/src/gitversion.txt
+
+# Protokolle und Betriebssystemdateien
+*.log
+.DS_Store
+
+# Lokale Zugangsdaten
+.env
+.env.*
+!.env.example
+
+# Wissenschaftliche Datendateien bleiben auf dem Uni-System
+*.nc

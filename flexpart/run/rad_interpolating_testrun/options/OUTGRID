@@ -1,0 +1,23 @@
+!*******************************************************************************
+!                                                                              *
+!      Input file for the Lagrangian particle dispersion model FLEXPART        *
+!                       Please specify your output grid                        *
+!                                                                              *
+! OUTLON0    = GEOGRAPHICAL LONGITUDE OF LOWER LEFT CORNER OF OUTPUT GRID     *
+! OUTLAT0    = GEOGRAPHICAL LATITUDE OF LOWER LEFT CORNER OF OUTPUT GRID      *
+! NUMXGRID   = NUMBER OF GRID POINTS IN X DIRECTION (= No. of cells + 1)       *
+! NUMYGRID   = NUMBER OF GRID POINTS IN Y DIRECTION (= No. of cells + 1)       *
+! DXOUT      = GRID DISTANCE IN X DIRECTION                                    *
+! DYOUN      = GRID DISTANCE IN Y DIRECTION                                    *
+! OUTHEIGHTS = HEIGHT OF LEVELS (UPPER BOUNDARY)                               *
+!*******************************************************************************
+&OUTGRID
+ OUTLON0=   -90.25,
+ OUTLAT0=   -30.25,
+ NUMXGRID=  420,
+ NUMYGRID=  230,
+ DXOUT=     0.5,
+ DYOUT=     0.5,
+ OUTHEIGHTS= 100.0, 500.0, 1000.0, 2000.0, 3000.0, 5000.0, 50000.0,
+ /
+ 
