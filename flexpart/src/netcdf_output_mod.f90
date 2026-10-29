@@ -65,6 +65,7 @@ module netcdf_output_mod
 
   ! netcdf dimension and variable IDs for main and nested output grid
   integer,allocatable,dimension(:) :: specID,specIDppt,wdspecID,ddspecID
+  integer,allocatable,dimension(:) :: specIDs22
   integer,allocatable,dimension(:) :: specIDn,specIDnppt,wdspecIDn,ddspecIDn, &
     recconcID,recpptvID
   integer                     :: timeID, timeIDn, timeIDpart
@@ -117,12 +118,14 @@ subroutine alloc_netcdf
 
   allocate( massIDi(maxspec), stat=stat)
   if (stat.ne.0) error stop "Could not allocate netcdf fields 2"
+  allocate(specIDs22(maxspec))
 end subroutine alloc_netcdf
 
 subroutine dealloc_netcdf
   deallocate( specID,specIDppt,wdspecID,ddspecID,specIDn,specIDnppt,wdspecIDn,ddspecIDn, &
     recconcID,recpptvID )
   deallocate( massIDi )
+  deallocate(specIDs22)
 end subroutine dealloc_netcdf
 
 !****************************************************************
@@ -542,6 +545,12 @@ subroutine writeheader_netcdf(lnest)
          specIDn(i) = sID
       else
          specID(i) = sID
+         if (ldirect.eq.-1.and.ind_source.eq.1.and.ind_receptor.eq.2) then
+           call nf90_err(nf90_def_var(ncid,'spec'//anspec//'_s22', &
+              nf90_float,dIDs,specIDs22(i), &
+              deflate_level=deflate_level,chunksizes=chunksizes))
+           call nf90_err(nf90_put_att(ncid,specIDs22(i),'units','s'))
+         endif
       endif
     endif
 
@@ -821,6 +830,9 @@ subroutine concoutput_netcdf(itime,outnum,gridtotalunc,wetgridtotalunc,drygridto
   !     January, 2024, Rona Thompson                                           *
   !           - removed output of receptors (new module)                       *
   !           - introduced option for LCM output                               *
+  !                                                                            *
+  !     October, 2026, Georg Brack                                             *
+  !           - introduced output of both sensitivities at once                *
   !                                                                            *
   !*****************************************************************************
   !                                                                            *
@@ -1135,7 +1147,15 @@ subroutine concoutput_netcdf(itime,outnum,gridtotalunc,wetgridtotalunc,drygridto
           call nf90_err(nf90_put_var(ncid,specID(ks),grid(0:numxgrid-1,0:numygrid-1,&
              1:numzwrite)*factor3d(0:numxgrid-1,0:numygrid-1,1:numzwrite)/tot_mu(ks,kp),&
                (/ 1,1,1,tpointer,kp,nage /), (/ numxgrid,numygrid,numzwrite,1,1,1 /) ))
- 
+          
+          if (ldirect.eq.-1.and.ind_source.eq.1.and.ind_receptor.eq.2) then
+             call nf90_err(nf90_put_var(ncid,specIDs22(ks), &
+                sum(gridunc_s22(:,:,1:numzwrite,ks,kp,:,nage),dim=4)* &
+                factor3d(0:numxgrid-1,0:numygrid-1,1:numzwrite)/tot_mu(ks,kp), &
+                (/1,1,1,tpointer,kp,nage/), &
+                (/numxgrid,numygrid,numzwrite,1,1,1/)))
+          endif
+
         endif !  concentration output
 
         ! Mixing ratio output
@@ -1192,9 +1212,11 @@ subroutine concoutput_netcdf(itime,outnum,gridtotalunc,wetgridtotalunc,drygridto
   ! Reinitialization of grid
   !*************************
   gridunc(:,:,:,1:nspec,:,:,1:nageclass) = 0.  
+  gridunc_s22(:,:,:,1:nspec,:,:,1:nageclass) = 0.  
   gridcnt(:,:,:) = 0.
 #ifdef _OPENMP
   gridunc_omp(:,:,:,:,:,:,:,:) = 0.  
+  gridunc_s22_omp(:,:,:,:,:,:,:,:) = 0.  
   gridcnt_omp(:,:,:,:) = 0.
 #endif
 

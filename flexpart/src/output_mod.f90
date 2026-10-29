@@ -62,19 +62,19 @@ subroutine init_output(itime,filesize)
         jul=bdate+real(itime,kind=dp)/86400._dp
         call caldate(jul,jjjjmmdd,ihmmss)      
       endif
-      ! if ((mdomainfill.eq.0).and.(ipin.le.1)) then
-      !   if (itime_init.ne.0) then
-      !     if (ldirect.eq.1) then
-      !       call create_particles_initialoutput(ihmmss,jjjjmmdd,ibtime,ibdate)
-      !     else
-      !       call create_particles_initialoutput(ihmmss,jjjjmmdd,ietime,iedate)
-      !     endif
-      !   else if (ldirect.eq.1) then
-      !     call create_particles_initialoutput(ibtime,ibdate,ibtime,ibdate)
-      !   else
-      !     call create_particles_initialoutput(ietime,iedate,ietime,iedate)
-      !   endif
-      ! endif
+      if ((mdomainfill.eq.0).and.(ipin.le.1)) then
+        if (itime_init.ne.0) then
+          if (ldirect.eq.1) then
+            call create_particles_initialoutput(ihmmss,jjjjmmdd,ibtime,ibdate)
+          else
+            call create_particles_initialoutput(ihmmss,jjjjmmdd,ietime,iedate)
+          endif
+        else if (ldirect.eq.1) then
+          call create_particles_initialoutput(ibtime,ibdate,ibtime,ibdate)
+        else
+          call create_particles_initialoutput(ietime,iedate,ietime,iedate)
+        endif
+      endif
       ! Create header files for files that store the particle dump output
       if (itime_init.ne.0) then
         if (ldirect.eq.1) then
@@ -614,6 +614,8 @@ subroutine conccalc(itime,weight)
   !                                                                            *
   !     2021, LB: OpenMP parallelisation                                       *
   !                                                                            *
+  !     29 October 2026: Update to output both sensitivities                   *
+  !                                                                            *
   !*****************************************************************************
   !                                                                            *
   ! Variables:                                                                 *
@@ -803,10 +805,16 @@ subroutine conccalc(itime,weight)
                   gridunc_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
                        gridunc_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
                        mass(i,ks)/rhoi*weight
+                  gridunc_s22_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
+                       gridunc_s22_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
+                       mass(i,ks)*weight
 #else
                   gridunc(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)= &
                        gridunc(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
                        mass(i,ks)/rhoi*weight
+                  gridunc_s22(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)= &
+                       gridunc_s22(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
+                       mass(i,ks)*weight
 #endif
                 end do
               end if ! llcmoutput
@@ -878,10 +886,16 @@ subroutine conccalc(itime,weight)
                   gridunc_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
                      gridunc_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
                      mass(i,ks)/rhoi*weight*w
+                  gridunc_s22_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
+                     gridunc_s22_omp(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
+                     mass(i,ks)*weight*w
 #else
                   gridunc(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)= &
                      gridunc(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
                      mass(i,ks)/rhoi*weight*w
+                  gridunc_s22(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)= &
+                     gridunc_s22(ix,jy,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
+                     mass(i,ks)*weight*w
 #endif
                  end do
               endif ! llcmoutput
@@ -928,10 +942,16 @@ subroutine conccalc(itime,weight)
                   gridunc_omp(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
                      gridunc_omp(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
                      mass(i,ks)/rhoi*weight*w
+                  gridunc_s22_omp(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
+                     gridunc_s22_omp(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
+                     mass(i,ks)*weight*w
 #else
                   gridunc(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)= &
                      gridunc(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
                      mass(i,ks)/rhoi*weight*w
+                  gridunc_s22(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)= &
+                     gridunc_s22(ix,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
+                     mass(i,ks)*weight*w
 #endif
                 end do
               endif ! llcmoutput
@@ -981,10 +1001,16 @@ subroutine conccalc(itime,weight)
                   gridunc_omp(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
                      gridunc_omp(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
                      mass(i,ks)/rhoi*weight*w
+                  gridunc_s22_omp(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
+                     gridunc_s22_omp(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
+                     mass(i,ks)*weight*w
 #else
                   gridunc(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)= &
                      gridunc(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
                      mass(i,ks)/rhoi*weight*w
+                  gridunc_s22(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)= &
+                     gridunc_s22(ixp,jyp,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
+                     mass(i,ks)*weight*w
 #endif
                 end do
               endif ! llcmoutput
@@ -1031,10 +1057,16 @@ subroutine conccalc(itime,weight)
                   gridunc_omp(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
                     gridunc_omp(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
                     mass(i,ks)/rhoi*weight*w
+                  gridunc_s22_omp(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)= &
+                    gridunc_s22_omp(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage,thread)+ &
+                    mass(i,ks)*weight*w
 #else
                   gridunc(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage)= &
                     gridunc(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
                     mass(i,ks)/rhoi*weight*w
+                  gridunc_s22(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage)= &
+                    gridunc_s22(ixp,jy,kz,ks,nrelpointer,part(i)%nclass,nage)+ &
+                    mass(i,ks)*weight*w
 #endif
                 end do
               endif ! llcmoutput
@@ -1264,8 +1296,10 @@ subroutine conccalc(itime,weight)
 #ifdef _OPENMP
   do ithread=1,numthreads_grid
     gridunc(:,:,:,:,:,:,:)=gridunc(:,:,:,:,:,:,:)+gridunc_omp(:,:,:,:,:,:,:,ithread)
+    gridunc_s22(:,:,:,:,:,:,:)=gridunc_s22(:,:,:,:,:,:,:)+gridunc_s22_omp(:,:,:,:,:,:,:,ithread)
     gridcnt(:,:,:)=gridcnt(:,:,:)+gridcnt_omp(:,:,:,ithread)
     gridunc_omp(:,:,:,:,:,:,:,ithread)=0.
+    gridunc_s22_omp(:,:,:,:,:,:,:,ithread)=0.
     gridcnt_omp(:,:,:,ithread)=0.
   end do
   if (nested_output.eq.1) then 
