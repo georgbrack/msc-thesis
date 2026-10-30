@@ -23,3 +23,6 @@ __pycache__/
 
 # Datensätze bleiben
 *.nc
+
+# Backup Ordner
+/flexpart/src_backup_*/
