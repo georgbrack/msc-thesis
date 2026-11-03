@@ -1,4 +1,0 @@
-&SPECIES_PARAMS
- PSPECIES="Xe-135",           ! Tracer name: XENON 135
- PDECAY=32911.0,              ! Species half life [https://www.internetchemie.info/chemische-elemente/isotope.php]
- /
