@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --time=01:00:00
+#SBATCH --time=03:00:00
 #SBATCH --job-name=new_delhi
 #SBATCH --ntasks=16
 #SBATCH --mem=32GB

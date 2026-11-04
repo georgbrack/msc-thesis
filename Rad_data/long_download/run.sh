@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=era5-jun+may
+#SBATCH --job-name=era5-apr
 #SBATCH --partition=long
-#SBATCH --array=5-6%1
+#SBATCH --array=4
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1

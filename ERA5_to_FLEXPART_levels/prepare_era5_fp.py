@@ -8,11 +8,21 @@ import eccodes
 import numpy as np
 import pandas as pd
 import xarray as xr
+import sys
 from era5_vertical import read_hybrid_coefficients, geometric_altitude, calculate_geometry, average_to_flexpart_layers
 
 # Time scale (end exclusive)
-start_time = pd.Timestamp("2015-04-01 00:00:00")
-end_time = pd.Timestamp("2015-06-30 23:00:00")
+periods = [
+    ("2015-04-01 00:00", "2015-05-01 00:00"),
+    ("2015-05-01 00:00", "2015-06-01 00:00"),
+    ("2015-06-01 00:00", "2015-06-30 23:00")
+]
+
+start, end = periods[int(sys.argv[1]) - 4]
+start_time = pd.Timestamp(start)
+end_time = pd.Timestamp(end)
+
+print(f"Berechne {start} bis {end} UTC (Ende exklusiv)")
 
 times = pd.date_range(start=start_time, end=end_time, freq="1h", inclusive="left")
 
