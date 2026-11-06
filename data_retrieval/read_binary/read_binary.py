@@ -57,7 +57,7 @@ def read_namelists(flxdir):
     dy = nml['outgrid']['dyout']
 
     lon = np.arange(lon0 + dx/2, lon0+nlon*dx, dx)
-    lat = np.arange(lat0 + dx/2, lat0+nlat*dy, dy)
+    lat = np.arange(lat0 + dy/2, lat0+nlat*dy, dy)
 
     nml = f90nml.read(f'{flxdir}/AGECLASSES.namelist')
     age = nml['ageclass']['lage']

@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import xarray as xr
 import sys
-from era5_vertical import read_hybrid_coefficients, geometric_altitude, calculate_geometry, average_to_flexpart_layers
+from MSC_Thesis.data_retrieval.rad_data.ERA5_to_FLEXPART_levels.era5_vertical import read_hybrid_coefficients, geometric_altitude, calculate_geometry, average_to_flexpart_layers
 
 # Time scale (end exclusive)
 periods = [
