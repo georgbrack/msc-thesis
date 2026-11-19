@@ -3,10 +3,10 @@ requires = ["setuptools>=61"]
 build-backen = "setuptools.build_meta"
 
 [project]
-name = "flexpart_tools"
+name = "fp_ana_tools"
 version = "0.1.0"
 requires-python = ">=3.9"
-dependencies = ["numpy", "xarray", "f90nml", "eccodes"]
+dependencies = ["numpy", "xarray", "f90nml", "eccodes", "pandas"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

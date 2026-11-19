@@ -2,7 +2,7 @@
 #SBATCH --time=04:00:00
 #SBATCH --job-name=new_delhi
 #SBATCH --ntasks=16
-#SBATCH --mem=32GB
+#SBATCH --mem=25GB
 #SBATCH --output=new_delhi_30d_24h_hourly_releases.log
 #SBATCH --nodelist=jet14
 #SBATCH --mail-type=ALL

@@ -1,10 +1,21 @@
+"""
+Read FLEXPART release metadata and gridded initial-condition sensitivities
+This part was writen by Marina Dütsch. Docstrings added by Georg Brack
+"""
+
 import numpy as np
 import datetime
 import f90nml
 import xarray as xr
 import glob
+from pathlib import Path
+from typing import Sequence, Union
+
 
 def decode_binary(flxdir, ntim, nlev, nlat, nlon, linv=0):
+    """
+    I skipped writing a docstring because this function is only used be the other two functions.
+    """
     if linv == 0:
         inipaths = [f'{flxdir}/grid_initial_001']
         len_dummy_entries = 20
@@ -43,7 +54,26 @@ def decode_binary(flxdir, ntim, nlev, nlat, nlon, linv=0):
 
     return inisens
 
-def read_namelists(flxdir):
+def read_namelists(flxdir: Union[str, Path]) -> tuple[list[datetime.datetime], list[datetime.datetime], np.ndarray, np.ndarray, np.ndarray, int]:
+    """
+    Read release windows and output-grid coordinates from a FLEXPART run.
+
+    Parameters
+    ----------
+    flxdir : str or pathlib.Path
+        FLEXPART output directory containing the namelists and grid file.
+
+    Returns
+    -------
+    times_ini, times_fin : list of datetime
+        Start of the backward window and release time for each release (UTC).
+    heights : numpy.ndarray
+        Layer boundaries in meters agl, including zero at the surface.
+    lat, lon : numpy.ndarray
+        Output-grid cell centres in degrees.
+    age : int
+        Backward integration duration in seconds
+    """
     nml = f90nml.read(f'{flxdir}/OUTGRID.namelist')
 
     nlon = nml['outgrid']['numxgrid']
@@ -72,8 +102,30 @@ def read_namelists(flxdir):
 
     return times_ini, times_fin, heights, lat, lon, age
 
-def read_gridini(flxdir, times, heights, lat, lon, linv=0):
+def read_gridini(flxdir: Union[str, Path], times: Sequence[datetime.datetime], heights: Union[np.ndarray, Sequence[float]], lat: Union[np.ndarray, Sequence[float]], lon: Union[np.ndarray, Sequence[float]], linv: int=0) -> xr.Dataset:
+    """
+    Decode FLEXPART initial-condition sensitivities onto the output grid.
 
+    Each entry on the valid_time axis describes one release at the start fo its backward window.
+
+    Parameters
+    ----------
+    flxdir : str or pathlib.Path
+        FLEXPART output directory containing the grid_initial files.
+    times : sequence of datetime
+        Initial times in UTC, one per release, in the order stored in the binary output.
+    heights : array-like
+        Layer boudnaries in meters agl, starting at zero.
+    lat, lon : array-like
+        Latitude and longitude of output-grid cell centers, in degrees.
+    linv : int, default 0
+        Binary layout selector. Use 0 for grid_initial_001 or 1 for the alternate layout with multiple grid_initial files.
+    
+    Returns
+    -------
+    xarray.Dataset
+        Dataset containing sensitivity on (valid_time, height, latitude, longitude). The height coordinate gives layer tops in meters agl.
+    """
     ntim = len(times)
     nlev = len(heights)-1
     nlat = len(lat)
