@@ -26,3 +26,4 @@ __pycache__/
 
 # Backup Ordner
 /flexpart/src_backup_*/
+*.csv
